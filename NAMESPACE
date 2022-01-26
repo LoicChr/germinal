@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)
+import(BH)
+import(phangorn)
+import(ape)
+importFrom("stats", "var")
+import(corpcor)
+useDynLib(germinal, .registration = TRUE)
