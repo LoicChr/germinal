@@ -1,6 +1,6 @@
 \name{findLVeq}
 \alias{findLVeq}
-\title{Trait-dependent pairwise interaction matrix}
+\title{Algorithmic search of a LV feasible equilibrium}
 \usage{
 findLVeq(K, A)
 }
