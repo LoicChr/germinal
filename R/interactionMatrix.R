@@ -41,7 +41,7 @@ interactionMatrix <- function(tr, intercept, mu, sigma, rho = NULL, intra = 1, s
   }
   aij = intercept*aij
 
-  if (std) aij = aij*exp(0.5 *t(mu) %*% inv_sigma_mat %*% (mu))
+  if (std) aij = aij*drop(exp(0.5 *t(mu) %*% inv_sigma_mat %*% (mu)))
 
   if (!is.null(intra)) diag(aij) <- intra
 
