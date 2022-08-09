@@ -13,7 +13,7 @@
 # Interaction_matrix calculates the pairwise competition matrix as a function of the intercept, mu, sigma and rhos parameters. Intra specifies the intraspecific interaction coefficients.
 
 
-interactionMatrix <- function(tr, intercept, mu, sigma, rho = NULL, intra = 1){
+interactionMatrix <- function(tr, intercept, mu, sigma, rho = NULL, intra = 1, std = F){
   if (length(unique(c(ncol(tr), length(mu), length(sigma)))) > 1)  stop("mu, sigma and ncol(tr) don't match")
   if (length(intercept) > 1) stop("intercept must be a scalar")
   if (!(length(intercept) == nrow(tr) | length(intra) == 1 | is.null(intra))) stop("intra must be either NULL, a scalar or a vector of length equal to nrow(tr)")
@@ -40,6 +40,9 @@ interactionMatrix <- function(tr, intercept, mu, sigma, rho = NULL, intra = 1){
     }
   }
   aij = intercept*aij
+
+  if (std) aij = aij*exp(0.5 *t(mu) %*% inv_sigma_mat %*% (mu))
+
   if (!is.null(intra)) diag(aij) <- intra
 
   return(aij)
