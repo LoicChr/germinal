@@ -2,7 +2,7 @@
 \alias{interactionMatrix}
 \title{Trait-dependent pairwise interaction matrix}
 \usage{
-interactionMatrix(tr, intercept, mu, sigma, rho = NULL, intra = 1)
+interactionMatrix(tr, intercept, mu, sigma, rho = NULL, intra = 1, std = F)
 }
 \description{
 Generates a pairwise interaction matrix that assumes that coefficients are a bell-shaped (Gaussian) function of species trait differences.
@@ -14,6 +14,7 @@ Generates a pairwise interaction matrix that assumes that coefficients are a bel
 \item{sigma}{vector that contains the width of the Gaussian function along the trait difference dimensions}
 \item{rho}{vector of partial correlation parameters that specify the interaction among trait difference dimensions. Each element must be between -1 and 1}
 \item{intra}{Value of the intraspecific interaction parameters. If NULL, the value is calculated similarly to interspecific interaction coefficients}
+\item{std}{Do we standardize the interaction coefficients so that aij(dt = 0) = C}
 
 }
 \references{
