@@ -3,10 +3,10 @@ Type: Package
 Title: Utilities to model communities
 Version: 0.1.0
 Author: Loïc Chalmandrier
-Maintainer: Loïc Chalmandrier <loic.chalmandrier@ur.de>
+Maintainer: Loïc Chalmandrier <loic.chalmandrier@univ-grenoble-alpes.fr>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
-License: GPL (>= 3)
+License: GPL (>= 3)  + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: Rcpp (>= 1.0.8), BH, phangorn, ape, mathjaxr, corpcor

@@ -2,7 +2,7 @@
 \alias{abgDecompQ}
 \title{ Alpha, beta, gamma decomposition with parametrization of the dominance effect}
 \usage{
-abgDecompQ(spxp, Z=NULL, q=2, check=TRUE)
+abgDecompQ(spxp, Z=diag(ncol(spxp)), q=2, site.weight = NULL, check=TRUE)
 }
 \description{
 divLeinster calculates the diversity of each site of a site by species matrix according to the q parameter according to Leinster & Cobbold 2012.
@@ -16,8 +16,9 @@ Warning: this formula only works with an ultrametric tree!
 }
 \arguments{
 \item{spxp}{Site by species matrix}
-\item{Z}{Matrix of similarities among species}
+\item{Z}{Matrix of similarities among species. Default to the identity matrix (taxonomic diversity)}
 \item{q}{Value of the dominance parameter. Defaults to q = 2.}
+\item{site.weight}{weight associated to each site. Defaults to equal weights for each site}
 \item{check}{Should the arguments be checked?}
 }
 \references{

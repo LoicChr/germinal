@@ -1,5 +1,5 @@
 
-abgDecompQ <- function(spxp, Z=NULL, q=2, check=TRUE) {
+abgDecompQ <- function(spxp, Z=diag(ncol(spxp)), q=2, site.weight = NULL, check=TRUE) {
   #Calcul the diversity of each site of sites by species matrix.
   #spxp columns and Z rows/cols are assumed to be in the same order.
   if (is.null(Z)) Z <- diag(ncol(spxp))
@@ -9,10 +9,17 @@ abgDecompQ <- function(spxp, Z=NULL, q=2, check=TRUE) {
     if (!inherits(Z, "matrix")) {
       stop("object \"Z\" is not of class \"matrix\"")}
     if (!all(c(ncol(Z), nrow(Z)) == ncol(spxp))){
-      stop("object \"Z\" and object \"spxp\" does not have matching dimensions")}
+      stop("object \"Z\" and object \"spxp\" do not have matching dimensions")}
+    if (nrow(spxp) != length(site.weight) & !is.null(site.weight)){
+      stop("object \"site.weight\" and object \"spxp\" do not have matching dimensions")
+    }
+  }
+  if (is.null(site.weight)){
+    site.weight <- rep(1/nrow(spxp), nrow(spxp))
+  }else{
+    site.weight <- site.weight/sum(site.weight)
   }
 
-  site.weight <- rep(1/nrow(spxp), nrow(spxp))
   spxp <- sweep(spxp, 1, rowSums(spxp), "/")
 
   gamma.ab <- colSums(sweep(spxp, 1, site.weight, "*"))
