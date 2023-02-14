@@ -2,7 +2,7 @@
 abgDecompQ <- function(spxp, Z=diag(ncol(spxp)), q=2, site.weight = NULL, check=TRUE) {
   #Calcul the diversity of each site of sites by species matrix.
   #spxp columns and Z rows/cols are assumed to be in the same order.
-  if (is.null(Z)) Z <- diag(ncol(spxp))
+
   if (check){
     if (!inherits(spxp, "matrix")) {
       stop("object \"spxp\" is not of class \"matrix\"")}
