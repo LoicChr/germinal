@@ -9,9 +9,9 @@ Description: More about what it does (maybe more than one line)
 License: GPL (>= 3)  + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: Rcpp (>= 1.0.8), BH, phangorn, ape, mathjaxr, corpcor
+Imports: Rcpp (>= 1.0.8), BH, phangorn, ape, corpcor
 Suggests:picante
 LinkingTo: Rcpp, BH
 RoxygenNote: 7.1.2
 Roxygen: list(markdown = TRUE)
-RdMacros: mathjaxr
+RdMacros: 

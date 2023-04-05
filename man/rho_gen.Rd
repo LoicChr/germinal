@@ -5,11 +5,11 @@
 rho_gen(thetas)
 }
 \description{
-\loadmathjax
-Generates a correlation matrix among N vectors using \mjseqn{\frac{N(N-1)}{2}} \mjseqn{\theta} parameters. The cosinus of \mjseqn{\theta} parameters are the partial correlation coefficients among vectors.
+
+Generates a correlation matrix among N vectors using 0.5*N(N-1) theta parameters. The cosinus of the theta parameters are the partial correlation coefficients among vectors.
 }
 \arguments{
-\item{thetas}{vector of \mjseqn{\theta} parameters. Each element must be between 0 and \mjseqn{\pi}}
+\item{thetas}{vector of theta parameters. Each element must be between 0 and pi}
 
 }
 \references{

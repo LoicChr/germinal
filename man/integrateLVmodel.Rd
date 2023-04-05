@@ -18,13 +18,13 @@ Integrates an ordinary differential equation (ODE) model of a Lotka-Volterra sys
 
 \loadmathjax
 
-\mjsdeqn{\frac{dP_i}{dt} = P_i (r_i - \sum_j a_{ij} P_j )}
+%\mjsdeqn{\frac{dP_i}{dt} = P_i (r_i - \sum_j a_{ij} P_j )}
+dPi/dt = Pi (ri - sum aij Pj)
+
+With Pi the abundance of species i, r_i its intrinsic growth rate and a_ij the (negative) per capita impact of species j on species i.
 
 
-With \mjseqn{P_i} the abundance of species \emph{i}, \mjseqn{r_i} its intrinsic growth rate and \mjseqn{a_{ij}} the (negative) per capita impact of species \emph{j} on species \emph{i}.
-
-
-The model uses the c++ library \emph{odeint}.
+The model uses the c++ library odeint.
 }
 
 \references{

@@ -9,9 +9,9 @@ This function finds an feasible equilibrium point for a Lotka-Volterra system th
 
 \loadmathjax
 
-\mjsdeqn{\mathbf{K} - \mathbf{A} \mathbf{P}^* = 0}
-
-With \mjseqn{\mathbf{K}} the vector of carrying capacities, \mjseqn{\mathbf{A}} the matrix of pairwise interaction coefficients and \mjseqn{\mathbf{P}^*} the vector of species abundances at equilibrium to estimate.
+%\mjsdeqn{\mathbf{K} - \mathbf{A} \mathbf{P}^* = 0}
+K - AP* = 0
+With K the vector of carrying capacities, K the matrix of pairwise interaction coefficients and P* the vector of species abundances at equilibrium to estimate.
 
 The algorithm does the appropriate matrix inversion to solve the equation. If at least one of the abundance value is negative, then the algorithm assumes that the species with the most negative abundance at equilibrium is absent from the community and its abundance is set to 0 and the operation is repeated among the remaining species. This is iterated until all species abundances at equilibrium are positive.
 
