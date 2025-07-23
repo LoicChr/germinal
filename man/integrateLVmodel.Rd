@@ -16,7 +16,7 @@ integrateLVmodel(r,a,init,t0, t1, dt)
 \description{
 Integrates an ordinary differential equation (ODE) model of a Lotka-Volterra system of species characterized by their intrinsic growth rate and their pairwise interaction coefficients. The ODE follows the following model with :
 
-\loadmathjax
+%\loadmathjax
 
 %\mjsdeqn{\frac{dP_i}{dt} = P_i (r_i - \sum_j a_{ij} P_j )}
 dPi/dt = Pi (ri - sum aij Pj)

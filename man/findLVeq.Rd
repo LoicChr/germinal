@@ -7,7 +7,7 @@ findLVeq(K, A)
 \description{
 This function finds an feasible equilibrium point for a Lotka-Volterra system through an interative algorithm. It aims to solve the equation:
 
-\loadmathjax
+%\loadmathjax
 
 %\mjsdeqn{\mathbf{K} - \mathbf{A} \mathbf{P}^* = 0}
 K - AP* = 0
