@@ -27,7 +27,7 @@ interactionMatrix <- function(tr, intercept, mu, sigma, rho = NULL, intra = 1, s
     rho_mat <- rho_gen(acos(rho))
   }
   if (ncol(tr) == 1){
-    inv_sigma_mat <- as.matrix(1/sigma)
+    inv_sigma_mat <- as.matrix(1/sigma^2)
   }else{
     inv_sigma_mat <- solve(diag(sigma) %*% rho_mat %*% diag(sigma))
   }
